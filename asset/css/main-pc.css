@@ -1,16 +1,3 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-html{
-    font-family: 'Quicksand', sans-serif;
-}
-.clear{
-    clear: both;
-}
-
 /* start css header */
 
 header{
@@ -22,37 +9,43 @@ header{
     box-shadow: 1px 1px 10px rgb(0 0 0 / 15%);
     top: 0;
 }
-#nav{
+.header-nav{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#nav #nav-left {
+.header-nav .header-nav__left{
     float: left;
     width: 70%;
     height: 80px;
     align-items: center;
     justify-content: center;
 }
-#nav #nav-left #logo{
+.header-nav .header-nav__left .nav-left__logo{
+    display: flex;
+}
+.header-nav .header-nav__left .nav-left__logo .logo{
     display: none;
 }
-.header-nav .header-nav__left .nav-left__logo .hidden{
+.header-nav .header-nav__left .nav-left__logo i{
     display: none;
     margin-top: 20px;
     margin-left: 30px;
     color: #91ad41;
+    font-size: 30px;
     
 }
-#nav #nav-left .nav-items, #nav #nav-right .nav-items {
+.header-nav .header-nav__left .header-nav__items, 
+.header-nav .header-nav__right .header-nav__items {
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-#nav #nav-left .menu,#nav #nav-left #back {
+.header-nav .header-nav__left .menu,
+.header-nav .header-nav__left .back {
     display: none;
 }
 .header-nav .header-nav__left li,
@@ -75,8 +68,13 @@ header{
 .header-nav .header-nav__left li p:hover{
     color: #91ad41;
 }
-
-#nav #nav-left #sub #subnav{
+.header-nav .header-nav__left .header-nav__sub{
+    position: relative;
+}
+.header-nav .header-nav__left .header-nav__sub i{
+    font-size: 10px;
+}
+.header-nav .header-nav__left .header-nav__sub .nav-sub__subnav{
     display: none;
     position: absolute;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -84,16 +82,19 @@ header{
     background-color: #fff;
     margin-left: -15px;
 }
-#nav #nav-left #subnav a{
+.header-nav .header-nav__left .header-nav__sub:hover>.nav-sub__subnav{
+    display: block;
+}
+.header-nav .header-nav__left .header-nav__sub .nav-sub__subnav a{
     margin-top: 15px;
     padding-bottom: 15px;
 }
-#nav #nav-right{
+.header-nav .header-nav__right{
     width: 30%;
     height: 80px;
     background-color: #fff;
 }
-#nav #nav-right .nav-items{
+.header-nav .header-nav__right .header-nav__items{
     float: right;
     margin-right: 150px;
 }
@@ -102,52 +103,18 @@ header{
 
 /* start css slider */
 
-.mySlides {
-    display: none
-}
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container{
   width:100%;
-  position: relative;
   margin-top: 80px;
 }
-
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+.slideshow-container img{
+    width: 100%;
 }
 /* end css slider */
 
 /*  start css introduce  */
-#introduce{
+.introduce{
     margin: 0;
     padding: 0;
     display: flex;
@@ -155,8 +122,9 @@ header{
     justify-content: center;
     position: relative;
     height: auto;
+    top: 0;
 }
-#introduce .introduce-items{
+.introduce .introduce-items{
     width: 25%;
     height: 100%;
     text-align: center;
@@ -168,15 +136,15 @@ header{
     box-sizing: border-box;
     color: #fff;
 }
-#introduce .introduce-items h3{
+.introduce .introduce-items h3{
     font-size: 25px;
     height: 65px;
 }
-#introduce .introduce-items p{
+.introduce .introduce-items p{
    padding-top: 10px;
    padding-bottom: 20px;
 }
-#introduce .introduce-items .btn{
+.introduce .introduce-items .btn{
     box-sizing: border-box;
     border: 1px;
     border-radius: 5px;
@@ -186,34 +154,34 @@ header{
     color: #fff;
     
 }
-#introduce .introduce-items .btn:hover{
+.introduce .introduce-items .btn:hover{
     background-color: #91ad41;
 }
-#introduce .introduce-items:hover{
+.introduce .introduce-items:hover{
     filter: brightness(60%);
 }
-#introduce .item-1{
+.introduce .introduce-items:first-child{
     background-image: url("../img/1.png");
     background-repeat: no-repeat;
     background-color: deepskyblue;
     background-position: right;
     background-size: 160px;
 }
-#introduce .item-2{
+.introduce .introduce-items:nth-child(2){
     background-image: url("../img/2.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 160px;
     background-color: #629104;
 }
-#introduce .item-3{
+.introduce .introduce-items:nth-child(3){
     background-image: url("../img/3.png");
     background-repeat: no-repeat;
     background-color: burlywood;
     background-position: right;
     background-size: 160px;
 }
-#introduce .item-4{
+.introduce .introduce-items:nth-child(4){
     background-image: url("../img/4.png");
     background-repeat: no-repeat;
     background-color: rgb(248, 176, 212);
@@ -232,7 +200,7 @@ header{
 .content h3{
     font-size: 30px;
 }
-.content .pd{
+.content p{
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 15px;
@@ -240,46 +208,46 @@ header{
     text-align: center;
 }
 /* start  first css content */
-.content .list{
+.content .content-list{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     margin-left: 50px;
     margin-right: 50px;
 }
-.content .list .list-items{
+.content .content-list .content__list-items{
     width: 20%;
 }
-.content .list .list-items h4{
+.content .content-list .content__list-items h4{
     margin-top: 15px;
     font-size: 20px;
 }
-.content .list .list-items p{
+.content .content-list .content__list-items p{
     margin-top: 15px;
 }
 /* end  first css content */
 /* start  second css content */
-.content .list .list2-items{
+.content .content-list:nth-child(2) .content__list-items{
     width: 20%;
     box-sizing: border-box;
 }
-.content .list .list2-items:hover{
+.content .content-list:nth-child(2) .content__list-items:hover{
     box-shadow: 1px 1px 10px rgb(0 0 0 / 15%);
     opacity: 0.6;
 }
-.content .list .list2-items img{
+.content .content-list:nth-child(2) .content__list-items img{
     width: 100%;  
 }
-.content .list .list2-items .text{
+.content .content-list:nth-child(2) .content__list-items .text{
     background-color: rgb(241, 240, 240);
     margin-top: 10px;
 }
-.content .list .list2-items .text span{
+.content .content-list:nth-child(2) .content__list-items .text span{
     color: #91ad41;
 }
 
 /* start css register */
-#register{
+.register{
     display: flex;
     margin-top: 30px;
     flex-direction: row;
@@ -288,7 +256,7 @@ header{
     border-top: 1px solid #e8dac7;
     justify-content: center;
 }
-#register .register-text{
+.register label{
     width: 40%;
     font-size: 30px;
     align-items: center;
@@ -296,7 +264,7 @@ header{
     display: flex;
     justify-content: center;
 }
-#register .register-input{
+.register .register-input{
     width: 40%;
     align-items: center;
     text-align: center;
@@ -305,7 +273,7 @@ header{
     margin: 0;
     padding: 0;
 }
-#register .register-input input{
+.register .register-input input{
     height: 45px;
     width: 300px;
     margin: 0;
@@ -314,7 +282,8 @@ header{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
-#register .register-input button{
+
+.register .register-input button{
     height: 45px;
     margin: 0;
     padding: 0;
@@ -325,34 +294,37 @@ header{
     width: 100px;
 }
 /* start css footer */
-#footer{
+footer{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#footer .contact{
+.contact{
     width: 40%;
     margin-top: 30px;
     margin-left: 90px;
     margin-bottom: 50px;
 }
-#footer .contact p{
+.contact p{
     margin-left: 15px;
 }
-#footer .contact .contact-items{
+.contact p i{
+    margin-right: 10px;
+}
+.contact .contact-items{
     margin-top: 15px;
 }
-#footer .footer-items{
+.footer-items{
     width: 20%;
     margin-top: 0;
 }
-#footer .footer-items h4{
+.footer-items h4{
     margin: 0;padding: 0;
     font-size: 20px;
     text-align: center;
     margin-bottom: 15px;
 }
-#footer .footer-items p{
+.footer-items p{
     align-items: center;
     text-align: center;
     margin-bottom: 15px;
