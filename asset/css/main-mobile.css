@@ -16,16 +16,16 @@
         background-color: #fff;
         z-index: 1;
     }
-    .header-nav{
+    .nav{
         width: 100%;
         height: auto;
     }
-    .header-nav .header-nav__left{
+    .nav .nav-left{
         width: 50%;
         left: 0;
         position: absolute;
     }
-    .header-nav .header-nav__left .header-nav__items {
+    .nav .nav-left .nav-items {
         display: none;
         overflow: hidden;
         width: 200%;
@@ -34,30 +34,34 @@
         left: 0;
         
     }
-    .header-nav .header-nav__left .nav-left__logo .logo{
-        margin-top: 10px;
-        margin-left: 20px;
-        display: block;
+    .nav .nav-left .nav-left__logo{
+        display: flex;
     }
-    .header-nav .header-nav__left .nav-left__logo i{
+    .nav .nav-left .nav-left__logo a{
+        margin-top: 10px;
+        
+        display: flex;
+        justify-content: left;
+    }
+    .nav .nav-left .nav-left__logo i{
         display: block;
         width: 20%;
         float: left;
     }
-    .header-nav .header-nav__left .menu{
+    .nav .nav-left a{
         display: flex;
         align-items: center;
         color: #fff;
         
     }
-    .header-nav .header-nav__left .back{
+    .nav .nav-left i{
         display: block;
         left: 0;
         color: black;
-        margin-right: 60px;
+        margin-right: 15px;
     }
-    .header-nav .header-nav__left li a,
-    .header-nav .header-nav__leftt li p{
+    .nav .nav-left li a,
+    .nav .nav-left li p{
         width: 100%;
         color: #fff;
         margin-top: 5px;
@@ -67,19 +71,19 @@
         border-bottom: 1px solid #6c757d;
         
     }
-    .header-nav .header-nav__left .header-nav__sub i{
+    .nav .nav-left .nav-sub i{
         float: right;
         margin-right: 10px;
         color: black;
     }
-    .header-nav .header-nav__left .header-nav__sub .nav-sub__subnav{
+    .nav .nav-left .nav-sub .nav-sub__subnav{
         width: 200%;
         height: 200vh;
         background-color: #91ad41;
         top: 0;
         left: 15px;
     }
-    .header-nav .header-nav__left .header-nav__sub .nav-sub__subnav a{
+    .nav .nav-left .nav-sub .nav-sub__subnav a{
         margin: 0;
         padding: 0;
         margin-top: 20px;
@@ -87,11 +91,11 @@
         line-height: 25px;
 
     }
-    .header-nav .header-nav__right{
+    .nav .nav-right{
         width: 0%;
         margin-left: 60px;
     }
-    .header-nav .header-nav__right .header-nav__items {
+    .nav .nav-right .nav-items {
         position: absolute;
         align-items: center;
         justify-content: end;
@@ -100,19 +104,42 @@
     .introduce{
         flex-direction: column;
     }
-    .introduce .introduce-items{
+    .introduce .introduce__items{
         width: 100%;
+    }
+    .introduce .introduce__items .btn{
+        margin-left: 70px;
+    }
+    .content p{
+        text-align: justify;
+        padding-left: 10%;
+        padding-right: 10%;
     }
     .content .content-list{
         flex-wrap: wrap;
     }
-    .content .content-list .content__list-items{
+    .content .content-list .content-items{
         width: 100%;
         margin-bottom: 25px;
     }
-    .content .content-list:nth-child(2) .content__list-items{
+    .content .content-list .content-items h4{
+        font-size: 30px;
+    }
+    .content .content-list .content-items P{
+        padding: 0;
+    }
+    .content .content-list .content-items img{
+        padding-left: 15px;
+    }
+    .content .content-list:nth-child(2) .content-items{
         width: 100%;
         margin-bottom: 25px;
+    }
+    .content .content-list:nth-child(2) .content-items .content-items__desc {
+        height: 110px;  
+    }
+    .content .content-list:nth-child(2) .content-items .content-items__desc p {
+        text-align: center;
     }
     .register{
         display: flex;
@@ -146,11 +173,14 @@
         width: 170px;
     }
     footer{
+        
+    }
+    .container{
         display: block;
         font-size: 15px;
     }
     .contact, 
-    .footer-items{
+    .footer__items{
         display: inline-block;
         width: 80%;
         margin-top: 30px;
@@ -160,11 +190,11 @@
      .contact p{
         display: inline;
     }
-     .footer-items h4{
+     .footer__items h4{
         font-size: 25px;
         text-align: left;
     }
-    .footer-items p{
+    .footer__items p{
         text-align: left;
     }
 }

@@ -9,27 +9,27 @@ header{
     box-shadow: 1px 1px 10px rgb(0 0 0 / 15%);
     top: 0;
 }
-.header-nav{
+.nav{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.header-nav .header-nav__left{
+.nav .nav-left{
     float: left;
     width: 70%;
     height: 80px;
     align-items: center;
     justify-content: center;
 }
-.header-nav .header-nav__left .nav-left__logo{
-    display: flex;
-}
-.header-nav .header-nav__left .nav-left__logo .logo{
+.nav .nav-left .nav-left__logo{
     display: none;
 }
-.header-nav .header-nav__left .nav-left__logo i{
+.nav .nav-left .nav-left__logo a{
+    
+}
+.nav .nav-left .nav-left__logo i{
     display: none;
     margin-top: 20px;
     margin-left: 30px;
@@ -37,44 +37,44 @@ header{
     font-size: 30px;
     
 }
-.header-nav .header-nav__left .header-nav__items, 
-.header-nav .header-nav__right .header-nav__items {
+.nav .nav-left .nav-items, 
+.nav .nav-right .nav-items{
     height: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.header-nav .header-nav__left .menu,
-.header-nav .header-nav__left .back {
+.nav .nav-left .nav-items .menu,
+.nav .nav-left .nav-items .back {
     display: none;
 }
-.header-nav .header-nav__left li,
-.header-nav .header-nav__right li{
+.nav .nav-left li,
+.nav .nav-right li{
     list-style: none;
     padding-left: 20px;
 
 }
-.header-nav .header-nav__left li a,
-.header-nav .header-nav__left li p,
-.header-nav .header-nav__right li a{
+.nav .nav-left li a,
+.nav .nav-left li p,
+.nav .nav-right li a{
     text-decoration: none;
     color: black;
     display: inline-block;
 }
-.header-nav .header-nav__left .header-nav__items{
+.nav .nav-left .nav-items{
     justify-content: flex-start;
 }
-.header-nav .header-nav__left li a:hover,
-.header-nav .header-nav__left li p:hover{
+.nav .nav-left li a:hover,
+.nav .nav-left li p:hover{
     color: #91ad41;
 }
-.header-nav .header-nav__left .header-nav__sub{
+.nav .nav-left .nav-sub{
     position: relative;
 }
-.header-nav .header-nav__left .header-nav__sub i{
+.nav .nav-left .nav-sub i{
     font-size: 10px;
 }
-.header-nav .header-nav__left .header-nav__sub .nav-sub__subnav{
+.nav .nav-left .nav-sub .nav-sub__subnav{
     display: none;
     position: absolute;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -82,19 +82,19 @@ header{
     background-color: #fff;
     margin-left: -15px;
 }
-.header-nav .header-nav__left .header-nav__sub:hover>.nav-sub__subnav{
+.nav .nav-left .nav-sub:hover>.nav-sub__subnav{
     display: block;
 }
-.header-nav .header-nav__left .header-nav__sub .nav-sub__subnav a{
+.nav .nav-left .nav-sub .nav-sub__subnav a{
     margin-top: 15px;
     padding-bottom: 15px;
 }
-.header-nav .header-nav__right{
+.nav .nav-right{
     width: 30%;
     height: 80px;
     background-color: #fff;
 }
-.header-nav .header-nav__right .header-nav__items{
+.nav .nav-right .nav-items{
     float: right;
     margin-right: 150px;
 }
@@ -103,12 +103,15 @@ header{
 
 /* start css slider */
 
+main{
+
+}
 /* Slideshow container */
-.slideshow-container{
+.slide{
   width:100%;
   margin-top: 80px;
 }
-.slideshow-container img{
+.slide img{
     width: 100%;
 }
 /* end css slider */
@@ -124,27 +127,29 @@ header{
     height: auto;
     top: 0;
 }
-.introduce .introduce-items{
+.introduce .introduce__items{
     width: 25%;
     height: 100%;
-    text-align: center;
+    text-align: justify;
     font-size: 14px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 60px;
+    padding-right: 60px;
     padding-top: 30px;
     padding-bottom: 30px;
     box-sizing: border-box;
     color: #fff;
+    align-items: center;
 }
-.introduce .introduce-items h3{
+.introduce .introduce__items h3{
     font-size: 25px;
     height: 65px;
+    text-align: center;
 }
-.introduce .introduce-items p{
+.introduce .introduce__items p{
    padding-top: 10px;
    padding-bottom: 20px;
 }
-.introduce .introduce-items .btn{
+.introduce .introduce__items .btn{
     box-sizing: border-box;
     border: 1px;
     border-radius: 5px;
@@ -152,36 +157,38 @@ header{
     height: 45px;
     background-color: #27272F;
     color: #fff;
-    
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 30px; 
 }
-.introduce .introduce-items .btn:hover{
+.introduce .introduce__items .btn:hover{
     background-color: #91ad41;
 }
-.introduce .introduce-items:hover{
+.introduce .introduce__items:hover{
     filter: brightness(60%);
 }
-.introduce .introduce-items:first-child{
+.introduce .introduce__items:first-child{
     background-image: url("../img/1.png");
     background-repeat: no-repeat;
     background-color: deepskyblue;
     background-position: right;
     background-size: 160px;
 }
-.introduce .introduce-items:nth-child(2){
+.introduce .introduce__items:nth-child(2){
     background-image: url("../img/2.png");
     background-repeat: no-repeat;
     background-position: right;
     background-size: 160px;
     background-color: #629104;
 }
-.introduce .introduce-items:nth-child(3){
+.introduce .introduce__items:nth-child(3){
     background-image: url("../img/3.png");
     background-repeat: no-repeat;
     background-color: burlywood;
     background-position: right;
     background-size: 160px;
 }
-.introduce .introduce-items:nth-child(4){
+.introduce .introduce__items:nth-child(4){
     background-image: url("../img/4.png");
     background-repeat: no-repeat;
     background-color: rgb(248, 176, 212);
@@ -199,12 +206,10 @@ header{
 }
 .content h3{
     font-size: 30px;
+    text-align: center;
 }
 .content p{
-    margin-left: 10%;
-    margin-right: 10%;
     margin-top: 15px;
-    align-items: center;
     text-align: center;
 }
 /* start  first css content */
@@ -215,35 +220,49 @@ header{
     margin-left: 50px;
     margin-right: 50px;
 }
-.content .content-list .content__list-items{
+.content .content-list .content-items{
     width: 20%;
+    align-items: center;
 }
-.content .content-list .content__list-items h4{
+.content .content-list .content-items h4{
     margin-top: 15px;
     font-size: 20px;
+    
 }
-.content .content-list .content__list-items p{
+.content .content-list .content-items p{
     margin-top: 15px;
+    width: 100%;
 }
 /* end  first css content */
 /* start  second css content */
-.content .content-list:nth-child(2) .content__list-items{
+.content .content-list:nth-child(2) .content-items{
     width: 20%;
     box-sizing: border-box;
 }
-.content .content-list:nth-child(2) .content__list-items:hover{
+
+.content .content-list:nth-child(2) .content-items:hover{
     box-shadow: 1px 1px 10px rgb(0 0 0 / 15%);
     opacity: 0.6;
 }
-.content .content-list:nth-child(2) .content__list-items img{
+.content .content-list:nth-child(2) .content-items img{
     width: 100%;  
 }
-.content .content-list:nth-child(2) .content__list-items .text{
+.content .content-list:nth-child(2) .content-items .content-items__desc{
     background-color: rgb(241, 240, 240);
     margin-top: 10px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
-.content .content-list:nth-child(2) .content__list-items .text span{
+.content .content-list:nth-child(2) .content-items .content-items__desc p{
+    margin-top: 15px;
+    width: 100%;
+}
+.content .content-list:nth-child(2) .content-items .content-items__desc span{
     color: #91ad41;
+    margin-bottom: 15px;
 }
 
 /* start css register */
@@ -295,6 +314,10 @@ header{
 }
 /* start css footer */
 footer{
+    width: 100%;
+}
+.container{
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,20 +334,20 @@ footer{
 .contact p i{
     margin-right: 10px;
 }
-.contact .contact-items{
+.contact .contact__items{
     margin-top: 15px;
 }
-.footer-items{
+.footer__items{
     width: 20%;
     margin-top: 0;
 }
-.footer-items h4{
+.footer__items h4{
     margin: 0;padding: 0;
     font-size: 20px;
     text-align: center;
     margin-bottom: 15px;
 }
-.footer-items p{
+.footer__items p{
     align-items: center;
     text-align: center;
     margin-bottom: 15px;
